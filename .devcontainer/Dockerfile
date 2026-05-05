@@ -39,3 +39,4 @@ RUN sudo apt install -y wget
 # Install necessary turtlebot4 packages
 RUN sudo apt install ros-humble-turtlebot4-desktop -y
 RUN sudo apt install -y ros-humble-irobot-create-msgs
+RUN sudo apt install -y ros-humble-turtlebot4-navigation
