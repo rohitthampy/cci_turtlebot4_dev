@@ -22,3 +22,12 @@
 
 To test if the setup has worked, run the command `ros2 topic list` and if everything works, you should see a list of ros2 topics from the turtlebot4.
 
+## Use of namespace
+The turtlebot4 robot within the cci has been given the namespace `/tbot4_1`.
+As such all topics, services and actions for the real robot will have a `/tbot4_1` prefix.
+In order for the tutorial commands to works properly with the robot, please add `namespace:=/tbot4_1` at the end of any ros2 launch commands.
+
+For example: `ros2 launch turtlebot4_viz view_robot.launch.py namespace:=/tbot4_1`
+
+For ros2 run commands, please add `--ros-args -r __ns:=/tbot4_1`towards the end.
+For example: `ros2 run rviz2 rviz2 --ros-args -r __ns:=/tbot4_1`.
