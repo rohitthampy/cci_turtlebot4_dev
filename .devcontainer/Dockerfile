@@ -36,6 +36,9 @@ RUN sudo apt install -y python3-pip
 # Install wget
 RUN sudo apt install -y wget
 
+# Install nano
+RUN sudo apt install -y nano
+
 # Install necessary turtlebot4 packages
 RUN sudo apt install ros-humble-turtlebot4-desktop -y
 RUN sudo apt install -y ros-humble-irobot-create-msgs
