@@ -1,6 +1,8 @@
 {
     "name": "cci turtlebot4",
     "dockerFile": "Dockerfile",
+    "initializeCommand": "xhost +local:",
+    "remoteUser": "docker-user",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -16,7 +18,8 @@
     "runArgs": [
         "--network=host",
         "-e", "DISPLAY=${env:DISPLAY}",
-        "-v", "/tmp/.X11-unix:/tmp/.X11-unix"
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix",
+        //"--runtime=nvidia" // To use with nvidia graphics card. Make sure you have installed nvidia-container-tookit before uncommenting this.
     ],
     "containerEnv": {
         "DISPLAY": "${localEnv:DISPLAY}"
