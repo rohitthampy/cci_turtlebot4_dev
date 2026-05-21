@@ -30,7 +30,7 @@
     "workspaceFolder": "/${localWorkspaceFolderBasename}",
 
     "mounts": [
-        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/ubuntu/.bash_history,type=bind"
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/docker-user/.bash_history,type=bind"
     ],
 
     "postCreateCommand": "bash -c 'echo \"source /opt/ros/humble/setup.bash\" >> ~/.bashrc && export RMW_IMPLEMENTATION=rmw_fastrtps_cpp >> ~/.bashrc'"
